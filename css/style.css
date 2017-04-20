@@ -124,14 +124,20 @@ h1 {
 
 .accomodation_box {
   width: 500px;
-  height: 500px;
+  height: 480px;
   text-align: center;
-  background-color: pink;
+  background-color: #BF3038;
   margin: auto;
+  color: white;
 }
 
 .accomodation_box p {
   height: 110px;
+}
+
+.slider img {
+  height: 300px;
+  widows: 500px;
 }
 
 .slider {
@@ -157,7 +163,7 @@ h1 {
   padding: 0;
   width: 500px;
   height: 300px;
-  background: #ccc;
+  background: #BF3038;
   text-align: center;
   line-height: 300px;
 }
