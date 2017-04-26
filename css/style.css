@@ -13,13 +13,17 @@ h1 {
   font-size: 32px;
 }
 
+#container {
+  width: 80%;
+  margin: auto;
+}
 /*//////////////////////////////////////////////////////////////////////////////////////////////*/
 
 /* Navigation bar all screen size attributes */
 
 #nav_ul {
-  list-style: none; 
-  margin: 20px; 
+  list-style: none;
+  margin: 20px;
   padding: 0px;
   position: relative;
   display: flex;
@@ -78,11 +82,85 @@ h1 {
   display: none;
 }
 
-/*End of Navigation Bar */
+/* End of Navigation Bar */
 
 /*//////////////////////////////////////////////////////////////////////////////////////////////*/
 
-/*Beginning of section about */
+/* Beginning of header */
+
+#image_panel {
+  display: flex;
+  flex-direction: row;
+}
+
+.header_panel {
+  max-width: 320px;
+  max-height: 834px;
+  width: auto;
+  height: auto;
+  margin: 0 auto 0 auto;
+}
+
+
+/* End of header */
+
+/*//////////////////////////////////////////////////////////////////////////////////////////////*/
+
+/* Beginning of section welcome */
+
+.line_break {
+  width: 100%;
+  height: 2px;
+  background-color: black;
+}
+
+#welcome > h1 {
+  margin-bottom: 0px;
+}
+
+#welcome_message {
+  background-color: #F0EDE6;
+  padding: 25px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+
+/* End of section welcome */
+
+/*//////////////////////////////////////////////////////////////////////////////////////////////*/
+
+/* Beginning of footer */
+footer {
+  width: 100%;
+  height: 25vh;
+  margin-top: 25px;
+  display: flex;
+  flex-direction: row;
+}
+
+.footer_section {
+  width: 33%;
+  height: 100%;
+  background-color: #403D37;
+  margin: 0 auto 0 auto;
+}
+
+#footer_address {
+  margin: 25px 0 0 25px;
+}
+
+#footer_address p {
+  color: white;
+  margin: 0;
+}
+
+
+/* End of footer */
+
+/*//////////////////////////////////////////////////////////////////////////////////////////////*/
+
+/* Beginning of section about */
 
 #about {
   background-color: #BF3038;
@@ -227,7 +305,7 @@ a.control_next {
 
 
 @media (min-width: 900px) {
-  
+
   /* Navigation bar hover effect when not responsive */
   #nav_ul li a,
   #nav_ul li a:after,
@@ -256,7 +334,7 @@ a.control_next {
 }
 
 @media screen and (max-width: 900px) {
-  
+
   /* Resonsive navigation bar */
   #hamburger {
     display: block;
@@ -264,64 +342,60 @@ a.control_next {
     top: 20px;
     right: 20px;
   }
-  
+
   #top_nav {
     margin-top: 65px;
   }
-  
+
   #nav_ul {
     display: block;
   }
-  
+
   #nav_ul li {
     display: none;
   }
-  
+
   #top_nav #nav_ul #nav_logo,
   #top_nav #nav_ul .nav_seperator {
     display: none;
   }
-  
+
   #nav_ul.responsive {
     position: relative;
     margin: -40px auto 0 auto;
     width: 50%;
   }
-  
+
   #nav_ul.responsive li {
     display: block;
     //width: inherit;
-    
+
   }
-  
+
   #nav_ul.responsive li a {
     display: block;
     //width: 100px;
     text-align: center;
     font-size: 20px;
   }
-  
+
   #nav_ul.responsive #hamburger {
     position: relative;
     top: 0px;
     right: 0px;
   }
-  
+
   #responsive_logo {
     display: inline-block;
     position: absolute;
     top: 20px;
     left: 20px;
   }
-  
+
   #responsive_logo svg {
     height: 35px;
     width: 35px;
   }
   /*End of responsive navigation bar */
-  
+
 }
-
-
-
-
