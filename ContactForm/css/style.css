@@ -1,0 +1,239 @@
+html {
+  font-family: 'Rajdhani', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 32px;
+}
+
+/*//////////////////////////////////////////////////////////////////////////////////////////////*/
+
+/* Navigation bar all screen size attributes */
+
+#nav_ul {
+  list-style: none; 
+  margin: 20px; 
+  padding: 0px;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-family: "Times New Roman", Georgia, Serif;
+  font-weight: lighter;
+}
+
+#nav_ul li {
+  display: inline;
+  margin: auto;
+}
+
+#nav_ul a {
+  text-decoration: none;
+  font-size: 50px;
+  margin: 0px;
+  padding: 0px;
+  padding-bottom: 10px;
+  color: black;
+}
+
+#nav_ul li a:hover {
+    color: #BF3038;
+}
+
+#nav_logo {
+  width: 20vw;
+  height: auto;
+}
+
+#nav_logo:hover path {
+  fill:  #b1c9e5;
+}
+
+.nav_seperator {
+  font-size: 50px;
+  padding: 0;
+  margin: 0;
+  color: #BF3038;
+}
+
+.nav_seperator:hover {
+  color: #b1c9e5;
+}
+
+#hamburger {
+  width: 35px;
+  height: 35px;
+  color: black;
+  display: none;
+}
+
+#responsive_logo {
+  display: none;
+}
+
+/*End of Navigation Bar */
+
+/*//////////////////////////////////////////////////////////////////////////////////////////////*/
+
+/*Beginning of section about */
+
+#about {
+  background-color: #BF3038;
+  color: white;
+  padding: 30px;
+}
+
+#about > h1 {
+  text-align: center;
+}
+
+
+/*End of section about */
+
+
+/*//////////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+/*Beginning of section facilities */
+
+#facilities {
+  background-color: white;
+  padding: 30px;
+}
+
+#facilities > h1 {
+  text-align: center;
+}
+
+#facilities > h2 {
+  text-align: center;
+}
+
+
+/*End of section facilities */
+
+
+/*//////////////////////////////////////////////////////////////////////////////////////////////*/
+
+/*Beginning of section forms */
+
+#forms {
+  background-color: #BF3038;
+  color: white;
+  padding: 30px;
+}
+
+#forms > h1 {
+  text-align: center;
+}
+
+
+
+/*End of section forms */
+
+
+/*//////////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+@media (min-width: 900px) {
+  
+  /* Navigation bar hover effect when not responsive */
+  #nav_ul li a,
+  #nav_ul li a:after,
+  #nav_ul li a:before {
+    transition: color 300ms;
+  }
+
+  #nav_ul li a:after,
+  #nav_ul li a:before {
+    content: '';
+    display: block;
+    height: 3px;
+    visibility: hidden;
+    transform: scaleX(0);
+    background-color: #BF3038;
+    transition: all 300ms ease-in-out;
+  }
+
+  #nav_ul li a:hover::after,
+  #nav_ul li a:hover::before {
+    visibility: visible;
+    transform: scaleX(1);
+  }
+  /*End of navigation bar hover effect when not responsive*/
+
+}
+
+@media screen and (max-width: 900px) {
+  
+  /* Resonsive navigation bar */
+  #hamburger {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+  
+  #top_nav {
+    margin-top: 65px;
+  }
+  
+  #nav_ul {
+    display: block;
+  }
+  
+  #nav_ul li {
+    display: none;
+  }
+  
+  #top_nav #nav_ul #nav_logo,
+  #top_nav #nav_ul .nav_seperator {
+    display: none;
+  }
+  
+  #nav_ul.responsive {
+    position: relative;
+    margin: -40px auto 0 auto;
+    width: 50%;
+  }
+  
+  #nav_ul.responsive li {
+    display: block;
+    //width: inherit;
+    
+  }
+  
+  #nav_ul.responsive li a {
+    display: block;
+    //width: 100px;
+    text-align: center;
+    font-size: 20px;
+  }
+  
+  #nav_ul.responsive #hamburger {
+    position: relative;
+    top: 0px;
+    right: 0px;
+  }
+  
+  #responsive_logo {
+    display: inline-block;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+  }
+  
+  #responsive_logo svg {
+    height: 35px;
+    width: 35px;
+  }
+  /*End of responsive navigation bar */
+  
+}
