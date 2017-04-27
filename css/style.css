@@ -1,6 +1,7 @@
 /* Red is #BF3038
    Cream is #F0EDE6 */
 
+/* Universal CSS for all pages */
 
 html {
   font-family: 'Rajdhani', sans-serif;
@@ -21,9 +22,10 @@ h1 {
   width: 80%;
   margin: auto;
 }
-/*//////////////////////////////////////////////////////////////////////////////////////////////*/
 
-/* Navigation bar all screen size attributes */
+/*///////////////////////////////////////// All Pages ////////////////////////////////////////*/
+
+/* Navigation bar for all screen sizes and all pages */
 
 #nav_ul {
   list-style: none;
@@ -86,247 +88,20 @@ h1 {
   display: none;
 }
 
-/* End of Navigation Bar */
+/* End of navigation bar for all screen sizes and all pages */
 
-/*//////////////////////////////////////////////////////////////////////////////////////////////*/
-
-/* Beginning of header */
-
-#image_panel {
-  display: flex;
-  flex-direction: row;
-}
-
-.header_panel {
-  max-width: 320px;
-  max-height: 834px;
-  width: auto;
-  height: auto;
-  margin: 0 auto 0 auto;
-}
-
-
-/* End of header */
-
-/*//////////////////////////////////////////////////////////////////////////////////////////////*/
-
-/* Beginning of section welcome */
-
-.line_break {
-  width: 100%;
-  height: 2px;
-  background-color: black;
-}
-
-#welcome > h1 {
-  margin-bottom: 0px;
-}
-
-#welcome_message {
-  background-color: #F0EDE6;
-  padding: 25px;
-  margin-top: 25px;
-  margin-bottom: 25px;
-}
-
-
-/* End of section welcome */
-
-/*//////////////////////////////////////////////////////////////////////////////////////////////*/
-
-/* Beginning of footer */
-footer {
-  width: 100%;
-  height: 25vh;
-  margin-top: 25px;
-  display: flex;
-  flex-direction: row;
-}
-
-.footer_section {
-  width: 33%;
-  height: 100%;
-  background-color: #403D37;
-  margin: 0 auto 0 auto;
-}
-
-#footer_address {
-  margin: 25px 0 0 25px;
-}
-
-#footer_address p {
-  color: white;
-  margin: 0;
-}
-
-#page_end {
-  width: 100%;
-  height: 10px;
-  background-color: #BF3038;
-  display: block;
-  margin-top: 20px;
-}
-
-
-/* End of footer */
-
-/*//////////////////////////////////////////////////////////////////////////////////////////////*/
-
-/* Beginning of section about */
-
-#about {
-  background-color: #BF3038;
-  color: white;
-  padding: 30px;
-}
-
-#about > h1 {
-  text-align: center;
-}
-
-
-/*End of section about */
-
-
-/*//////////////////////////////////////////////////////////////////////////////////////////////*/
-
-
-/*Beginning of section facilities */
-
-#facilities {
-  background-color: white;
-  padding: 30px;
-  float: none;
-}
-
-#facilities > h1 {
-  text-align: center;
-}
-
-#facilities > h2 {
-  text-align: center;
-}
-
-#accomodation_container {
-  display: flex;
-  flex-direction: row;
-}
-
-.accomodation_box {
-  width: 500px;
-  height: 480px;
-  text-align: center;
-  background-color: #BF3038;
-  margin: auto;
-  color: white;
-}
-
-.accomodation_box p {
-  height: 110px;
-}
-
-.slider img {
-  height: 300px;
-  widows: 500px;
-}
-
-.slider {
-  position: relative;
-  overflow: hidden;
-  margin: 0 auto 0 auto;
-  border-radius: 4px;
-}
-
-.slider ul {
-  position: relative;
-  margin: 0;
-  padding: 0;
-  height: 200px;
-  list-style: none;
-}
-
-.slider ul li {
-  position: relative;
-  display: block;
-  float: left;
-  margin: 0;
-  padding: 0;
-  width: 500px;
-  height: 300px;
-  background: #BF3038;
-  text-align: center;
-  line-height: 300px;
-}
-
-a.control_prev, a.control_next {
-  position: absolute;
-  top: 40%;
-  z-index: 999;
-  display: block;
-  padding: 4% 3%;
-  width: auto;
-  height: auto;
-  background: #2a2a2a;
-  color: #fff;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 18px;
-  opacity: 0.8;
-  cursor: pointer;
-}
-
-a.control_prev:hover, a.control_next:hover {
-  opacity: 1;
-  -webkit-transition: all 0.2s ease;
-}
-
-a.control_prev {
-  border-radius: 0 2px 2px 0;
-}
-
-a.control_next {
-  right: 0;
-  border-radius: 2px 0 0 2px;
-}
-
-
-
-/*End of section facilities */
-
-
-/*//////////////////////////////////////////////////////////////////////////////////////////////*/
-
-/*Beginning of section forms */
-
-#forms {
-  background-color: #BF3038;
-  color: white;
-  padding: 30px;
-}
-
-#forms > h1 {
-  text-align: center;
-}
-
-
-
-/*End of section forms */
-
-
-/*//////////////////////////////////////////////////////////////////////////////////////////////*/
-
+/* Navigation bar hover effect when the bar is not responsive for all pages */
 
 @media (min-width: 900px) {
 
-  /* Navigation bar hover effect when not responsive */
-  #nav_ul li a,
-  #nav_ul li a:after,
-  #nav_ul li a:before {
+  #nav_ul li a.not_active,
+  #nav_ul li a.not_active:after,
+  #nav_ul li a.not_active:before {
     transition: color 300ms;
   }
 
-  #nav_ul li a:after,
-  #nav_ul li a:before {
+  #nav_ul li a.not_active:after,
+  #nav_ul li a.not_active:before {
     content: '';
     display: block;
     height: 3px;
@@ -336,18 +111,42 @@ a.control_next {
     transition: all 300ms ease-in-out;
   }
 
-  #nav_ul li a:hover::after,
-  #nav_ul li a:hover::before {
+  #nav_ul li a.not_active:hover::after,
+  #nav_ul li a.not_active:hover::before {
     visibility: visible;
     transform: scaleX(1);
   }
-  /*End of navigation bar hover effect when not responsive*/
+
+  #nav_ul li a.active:after {
+    content: '';
+    display: block;
+    height: 3px;
+    background-color: #BF3038;
+  }
+
+  #nav_ul li a.active:before {
+    content: '';
+    display: block;
+    height: 3px;
+    visibility: hidden;
+    background-color: #BF3038;
+    transition: all 300ms ease-in-out;
+    transform: scaleX(0);
+  }
+
+  #nav_ul li a.active:hover::before {
+    visibility: visible;
+    transform: scaleX(1);
+  }
 
 }
 
+/* End of navigation bar hover effect when the bar is not responsive for all pages */\
+
+/* Begining of making the navigation bar responsive */
+
 @media screen and (max-width: 900px) {
 
-  /* Resonsive navigation bar */
   #hamburger {
     display: block;
     position: absolute;
@@ -408,6 +207,180 @@ a.control_next {
     height: 35px;
     width: 35px;
   }
-  /*End of responsive navigation bar */
 
+}
+
+/* End of making the navigation bar responsive */
+
+/* Beginning of footer */
+footer {
+  width: 100%;
+  height: 25vh;
+  margin-top: 25px;
+  display: flex;
+  flex-direction: row;
+}
+
+.footer_section {
+  width: 33%;
+  height: 100%;
+  background-color: #403D37;
+  margin: 0 auto 0 auto;
+}
+
+#footer_address {
+  margin: 25px 0 0 25px;
+}
+
+#footer_address p {
+  color: white;
+  margin: 0;
+}
+
+#page_end {
+  width: 100%;
+  height: 10px;
+  background-color: #BF3038;
+  display: block;
+  margin-top: 20px;
+}
+
+
+/* End of footer */
+
+/*//////////////////////////////// About - Homepage //////////////////////////////////////*/
+
+/* Beginning of header */
+
+#image_panel {
+  display: flex;
+  flex-direction: row;
+}
+
+.header_panel {
+  max-width: 320px;
+  max-height: 834px;
+  width: auto;
+  height: auto;
+  margin: 0 auto 0 auto;
+}
+
+
+/* End of header */
+
+/* Beginning of section welcome */
+
+.line_break {
+  width: 100%;
+  height: 2px;
+  background-color: black;
+}
+
+#welcome > h1 {
+  margin-bottom: 0px;
+}
+
+#welcome_message {
+  background-color: #F0EDE6;
+  padding: 25px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+
+/* End of section welcome */
+
+/*////////////////////////////////////// Facilities //////////////////////////////////////*/
+
+/* Beginning of header */
+
+#facilities_message {
+  background-color: #BF3038;
+  width: 100%;
+  color: white;
+  padding: 25px;
+}
+
+/* End of header */
+
+/* Beginning of section properties */
+.property_heading {
+  margin-bottom: 0;
+}
+
+.property_box {
+  width: 100%;
+  height: 300px;
+  background-color: #F0EDE6;
+  margin: 20px auto 20px auto;
+}
+
+.property_box p {
+  float: left;
+  width: 62%;
+  margin: 25px;
+}
+
+.slider img {
+  height: 300px;
+  width: 500px;
+}
+
+.slider {
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto 0 auto;
+  float: right;
+}
+
+.slider ul {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  height: 200px;
+  list-style: none;
+}
+
+.slider ul li {
+  position: relative;
+  display: block;
+  float: left;
+  margin: 0;
+  padding: 0;
+  width: 500px;
+  height: 300px;
+  background: #F0EDE6;
+  text-align: center;
+  line-height: 300px;
+}
+
+a.control_prev, a.control_next {
+  position: absolute;
+  top: 40%;
+  z-index: 999;
+  display: block;
+  padding: 4% 3%;
+  width: auto;
+  height: auto;
+  background: #2a2a2a;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 18px;
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+a.control_prev:hover, a.control_next:hover {
+  opacity: 1;
+  -webkit-transition: all 0.2s ease;
+}
+
+a.control_prev {
+  border-radius: 0 2px 2px 0;
+}
+
+a.control_next {
+  right: 0;
+  border-radius: 2px 0 0 2px;
 }
