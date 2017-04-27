@@ -1,3 +1,7 @@
+/* Red is #BF3038
+   Cream is #F0EDE6 */
+
+
 html {
   font-family: 'Rajdhani', sans-serif;
   margin: 0;
@@ -153,6 +157,14 @@ footer {
 #footer_address p {
   color: white;
   margin: 0;
+}
+
+#page_end {
+  width: 100%;
+  height: 10px;
+  background-color: #BF3038;
+  display: block;
+  margin-top: 20px;
 }
 
 
