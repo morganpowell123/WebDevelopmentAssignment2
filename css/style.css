@@ -62,6 +62,11 @@ h1 {
   height: auto;
 }
 
+#mav_logo h1 {
+    text-align: center;
+    
+}
+
 #nav_logo:hover path {
   fill:  #b1c9e5;
 }
@@ -246,15 +251,22 @@ footer {
 }
 
 
+
 /* End of footer */
 
 /*//////////////////////////////// About - Homepage //////////////////////////////////////*/
 
 /* Beginning of header */
 
-#image_panel {
+#facilities p {
+    text-align: center;
+}
+
+.accomodation_container {
   display: flex;
   flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 .header_panel {
@@ -297,6 +309,7 @@ footer {
 #facilities_message {
   background-color: #BF3038;
   width: 100%;
+  margin: 20px auto 20px auto;
   color: white;
   padding: 25px;
 }
