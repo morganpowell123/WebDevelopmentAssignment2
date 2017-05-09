@@ -250,6 +250,7 @@ footer_content {
 
 /* Beginning of header */
 
+/* Original code by BR, replacement code by JM
 #image_panel {
   display: flex;
   flex-direction: row;
@@ -261,8 +262,31 @@ footer_content {
   width: auto;
   height: auto;
   margin: 0 auto 0 auto;
+} */
+
+#image_header {
+ max-width: 100%;
+ height: auto;
+
+}
+.header_image {
+  max-width: 100%;
+  max-height: 834px;
+  width: auto;
+  height: auto;
+  margin: 0 auto 0 auto;
 }
 
+/* media query for mobile */
+
+@media (max-width:568px){
+
+#image_header {
+   display: none;
+
+ }
+
+}
 
 /* End of header */
 
