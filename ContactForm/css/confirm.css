@@ -1,0 +1,92 @@
+h1 {
+  font-size: 30px;
+  font-family: 'Rajdhani',sans-serif;
+  text-align: center;
+}
+input[type=submit]{
+    background-color: #BF2F38;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: 'Rajdhani',sans-serif;
+}
+input[type=submit]:hover {
+    background-color: #F06262;
+}
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    font-family: 'Rajdhani',sans-serif;
+    font-size: 20px;
+    text-align: left;
+}
+input[type=email], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    font-family: 'Rajdhani',sans-serif;
+    font-size: 20px;
+    text-align: left;
+}
+#name{ /* Name title */
+    font-family: 'Rajdhani',sans-serif;
+    font-size: 20px;
+    text-align: center;
+}
+#email{ /* Email title */
+    font-family: 'Rajdhani',sans-serif;
+    font-size: 20px;
+    text-align: center;
+}
+#message{ /* Message title */
+    font-family: 'Rajdhani',sans-serif;
+    font-size: 20px;
+    text-align: center;
+    resize: vertical;
+    max-height: 120px;
+}
+#title{
+    font-family: 'Rajdhani',sans-serif;
+    font-size: 20px;
+    text-align: center;
+}
+#title_select{
+    font-family: 'Rajdhani',sans-serif;
+    font-size: 18px;
+}
+#header{
+   
+}
+.logo{
+   float: right;
+}
+.button{ /* Allows the button to be centered */
+    text-align: center;
+}
+.container{ /* Contact form body */
+    border-radius: 5px;
+    background-color: #ffffff;
+    padding: 20px;
+    background-color:rgba(201,201,201,0.4);
+	padding-left:35px;
+	padding-right:35px;
+	padding-top:35px;
+	padding-bottom:50px;
+	width: 450px;
+	float: left;
+	left: 50%;
+	position: absolute;
+    margin-top:30px;
+	margin-left: -260px;
+}
